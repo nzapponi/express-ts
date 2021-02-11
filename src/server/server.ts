@@ -1,10 +1,10 @@
-import Debug from "debug";
+import debug from "debug";
 import express from "express";
 import http from "http";
 
 import config from "./config";
 
-const debug = Debug("express:server");
+const log = debug("server:server");
 const app = express();
 
 const normalizePort = (val: string) => {
@@ -39,11 +39,11 @@ server.on("error", (error: NodeJS.ErrnoException) => {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case "EACCES":
-      console.error(bind + " requires elevated privileges");
+      console.error(`${bind} requires elevated privileges`);
       process.exit(1);
       break;
     case "EADDRINUSE":
-      console.error(bind + " is already in use");
+      console.error(`${bind} is already in use`);
       process.exit(1);
       break;
     default:
@@ -54,7 +54,7 @@ server.on("error", (error: NodeJS.ErrnoException) => {
 server.on("listening", () => {
   const addr = server.address();
   const bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
-  debug("Listening on " + bind);
+  log(`Listening on ${bind}`);
 });
 
 config(app);
