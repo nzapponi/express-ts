@@ -7,7 +7,6 @@
         "editor.formatOnSave": false  
     },  
     "prettier.disableLanguages": ["js"],  
-    "eslint.alwaysShowStatus": true,  
-    "files.autoSave": "onFocusChange",
+    "eslint.alwaysShowStatus": true,
     "editor.tabSize": 2,
 }
