@@ -24,11 +24,7 @@ module.exports = {
       },
     ],
   },
-  externals: [
-    nodeExternals()
-  ],
-  plugins: [
-    new NodemonPlugin()
-  ],
-  watch: NODE_ENV === "development"
+  externals: [nodeExternals()],
+  plugins: [new NodemonPlugin()],
+  watch: NODE_ENV === "development",
 };
