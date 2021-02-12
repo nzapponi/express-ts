@@ -13,16 +13,18 @@ module.exports = {
     filename: "index.js",
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".ts", ".tsx", ".js"],
   },
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         use: ["ts-loader"],
+        exclude: /node_modules/,
       },
     ],
   },
+  devtool: "source-map",
   externals: [nodeExternals()],
   plugins: [new NodemonPlugin()],
   watch: NODE_ENV === "development",
