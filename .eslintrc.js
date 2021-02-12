@@ -16,14 +16,6 @@ module.exports = {
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "sort-imports": [
-      "warn",
-      {
-        "allowSeparatedGroups": true,
-        "ignoreCase": true,
-        "ignoreDeclarationSort": true
-      }
-    ],
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
