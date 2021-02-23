@@ -4,5 +4,6 @@
   "importOrder": [
     "^[./]"
   ],
-  "importOrderSeparation": true
+  "importOrderSeparation": true,
+  "parser": "babel-ts"
 }
