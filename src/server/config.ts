@@ -34,18 +34,19 @@ const config = (app: Express) => {
   // error handler
   app.use(
     (err: HttpError, req: Request, res: Response, _next: NextFunction) => {
+      const status = err.status || 500;
       const payload: {
         [key: string]: any;
       } = {
         message: err.message,
-        status: err.status,
+        status,
       };
       if (req.app.get("env") === "development") {
         payload.error = err;
       }
 
       // render the error page
-      res.status(err.status || 500);
+      res.status(status);
       res.json({
         ok: false,
         error: payload,
