@@ -4,7 +4,6 @@ import debug from "debug";
 import express, { Express, NextFunction, Request, Response } from "express";
 import createError, { HttpError } from "http-errors";
 import logger from "morgan";
-
 import apiRouter from "../routes/api";
 
 const log = debug("server:server");
@@ -39,6 +38,7 @@ const config = (app: Express) => {
         [key: string]: any;
       } = {
         message: err.message,
+        status: err.status,
       };
       if (req.app.get("env") === "development") {
         payload.error = err;
