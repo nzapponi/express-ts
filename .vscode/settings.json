@@ -1,12 +1,10 @@
 {
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+      "source.fixAll.eslint": true,
+      "source.organizeImports": true
     },
-    "editor.formatOnSave": true,  
-    "[javascript]": {  
-        "editor.formatOnSave": false  
-    },  
-    "prettier.disableLanguages": ["js"],  
+    "editor.formatOnSave": true,
     "eslint.alwaysShowStatus": true,
-    "editor.tabSize": 2,
-}
+    "editor.tabSize": 2
+  }
+  
