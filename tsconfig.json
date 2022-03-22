@@ -2,7 +2,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "module": "es6",
-    "target": "es6",
+    "target": "es2021",
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "./dist/",
@@ -11,5 +11,5 @@
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"],
-  "lib": ["es2015"]
+  "lib": ["es2021"]
 }
