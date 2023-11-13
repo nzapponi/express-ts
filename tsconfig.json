@@ -1,15 +1,22 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "module": "es6",
-    "target": "es2021",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "resolveJsonModule": true
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"],
-  "lib": ["es2021"]
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "composite": true,
+    "strict": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "types": [
+      "bun-types" // add Bun global
+    ]
+  }
 }

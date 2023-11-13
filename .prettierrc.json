@@ -5,5 +5,5 @@
     "^[./]"
   ],
   "importOrderSeparation": true,
-  "parser": "babel-ts"
+  "parser": "typescript"
 }
